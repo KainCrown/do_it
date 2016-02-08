@@ -1,0 +1,16 @@
+/*
+ *= require_tree .
+ *= require_self
+ */
+
+ @import 'material';
+
+ .layout-transparent {
+   background: image-url('start-page-image.jpg');
+   background-size: 100% 50vh;
+   background-repeat: no-repeat;
+   color: white;
+   .mdl-layout__drawer-button {
+      color: white;
+    }
+ }
