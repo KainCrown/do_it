@@ -1,5 +1,5 @@
 //= require jquery
 //= require jquery_ujs
-//= require material
+//= require materialize-sprockets
 //= require turbolinks
 //= require_tree .

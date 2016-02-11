@@ -10,7 +10,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'material_design_lite-sass'
+gem 'materialize-sass'
+gem 'material_icons'
 gem 'slim'
 
 group :development, :test do
