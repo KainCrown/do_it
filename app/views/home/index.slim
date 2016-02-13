@@ -1,87 +1,82 @@
-nav role="navigation"
-  .nav-wrapper.container
-    a#logo-container.brand-logo href="#" do_it
-    ul.right.hide-on-med-and-down
-      li
-        a href="#" Team
-      li
-        a href="#" Log In
-      li
-        a href="#" Sign Up
+#welcome
+  nav role='navigation'
+    .nav-wrapper.container
+      a#logo-container.brand-logo href="#" = t('app_name')
+      ul.right.hide-on-med-and-down
+        li
+          a href="#" = t('links.team')
+        li
+          a href="#" = t('links.log_in')
+        li
+          a href="#" = t('links.sign_up')
+      ul#nav-mobile.side-nav
+        li
+          a href="#" = t('links.team')
+        li
+          a href="#" = t('links.log_in')
+        li
+          a href="#" = t('links.sign_up')
+      a.button-collapse href="#" data-activates='nav-mobile'
+        i.material-icons menu
 
-    ul#nav-mobile.side-nav
-      li
-        a href="#" Team
-      li
-        a href="#" Log In
-      li
-        a href="#" Sign Up
-    a.button-collapse href="#" data-activates="nav-mobile"
-      i.material-icons menu
-
-.parallax-container#index-banner.valign-wrapper
-  .section.no-pad-bot.valign-wrapper
-    .container
-      br
-      br
-      h1.header.center.teal-text.text-lighten-2
-        | do_it
-      .row.center
-        h5.header.col.s12.light Effective development made easy
-      .row.center
-        a href="#" class="btn-large waves-effect waves-light teal lighten-1" Get Started
-      br
-      br
-
-  .parallax
-    = image_tag 'index/welcome.jpg'
-
-.container
-  .section
-    .center
-      h2 style="color: #26a69a;" Features
-    hr
-    .row
-      .col.s12.m4
-        .card.card-centered.darken-1.valign-wrapper
-          .card-content.white-text.valign
-            h2.center.white-text
-              i.material-icons message
-            span.card-title Team management
-            p Collect a team to develop the application, thus speeding up your work.
-
-      .col.s12.m4
-        .card.card-centered.darken-1.valign-wrapper
-          .card-content.white-text.valign
-            h2.center.white-text
-              i.material-icons trending_down
-            span.card-title Burndown chart
-            p Always be aware of the current state of development.
-
-
-      .col.s12.m4
-        .card.card-centered.valign-wrapper
-          .card-content.white-text.valign
-            h2.center.white-text
-              i.material-icons timer
-            span.card-title Log time
-            p Your team can see the number of hours worked in order to effectively distribute their working time.
-
-.section.created-by
   .parallax-container#index-banner.valign-wrapper
-    .section.no-pad-bot.valign
+    .section.no-pad-bot.valign-wrapper
       .container
         br
         br
-        h4.header.center.teal-text.text-lighten-2
-          | Created by developers for developers
+        h1.header.center.teal-text.text-lighten-2
+          = t('app_name')
+        .row.center
+          h5.header.col.s12.light = t('welcome.tagline_first')
+        .row.center
+          a.btn-large.waves-effect.waves-light.teal.lighten-1 = t('welcome.start_button')
         br
         br
 
     .parallax
-      = image_tag 'index/developers.jpg'
+      = image_tag 'index/welcome.jpg'
 
-footer.page-footer
-  .footer-copyright
-    .container
-      | © 2016 NSC-team
+  .container
+    .section
+      .center#features
+        h2 = t('welcome.features.general')
+      hr
+      .row
+        .col.s12.m4
+          .card.card-centered.darken-1.valign-wrapper
+            .card-content.white-text.valign
+              h2.center.white-text
+                i.material-icons message
+              span.card-title = t('welcome.features.team_managment')
+              p = t('welcome.features.team_managment_description')
+
+        .col.s12.m4
+          .card.card-centered.darken-1.valign-wrapper
+            .card-content.white-text.valign
+              h2.center.white-text
+                i.material-icons trending_down
+              span.card-title = t('welcome.features.burndown_chart')
+              p = t('welcome.features.burndown_chart_description')
+
+
+        .col.s12.m4
+          .card.card-centered.valign-wrapper
+            .card-content.white-text.valign
+              h2.center.white-text
+                i.material-icons timer
+              span.card-title = t('welcome.features.log_time')
+              p = t('welcome.features.log_time_description')
+
+  .section.created-by
+    .parallax-container#index-banner.valign-wrapper
+      .section.no-pad-bot.valign
+        .container
+          br
+          br
+          h4.header.center.teal-text.text-lighten-2
+            = t('welcome.tagline_second')
+          br
+          br
+
+      .parallax
+        = image_tag 'index/developers.jpg'
