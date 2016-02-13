@@ -1,0 +1,64 @@
+$white: #FFFFFF;
+$teal: #26A69A;
+
+#welcome {
+  nav {
+    background-color: $teal;
+  }
+
+  nav ul a,
+  nav .brand-logo {
+    color: $white;
+  }
+
+  p {
+    line-height: 2rem;
+  }
+
+  .button-collapse {
+    color: $white;
+  }
+
+  .parallax-container {
+    height: auto;
+    min-height: 500px;
+    color: $white;
+    background-color: rgba(0,0,0,0.5)
+  }
+
+  .parallax-container .section {
+    width: 100%;
+    height: 100%;
+  }
+
+  .icon-block {
+    text-align: center;
+  }
+
+  .card {
+    background-color: $teal;
+    min-height: 350px;
+    height: auto;
+    .material-icons {
+      font-size: 4rem;
+    }
+  }
+
+  .card-centered {
+    display: flex;
+    align-items: center;
+
+    .card-content {
+      min-width: 100%;
+      text-align: center;
+    }
+  }
+
+  .section.created-by {
+    padding-bottom: 0;
+  }
+
+  #features {
+    color: $teal;
+  }
+}

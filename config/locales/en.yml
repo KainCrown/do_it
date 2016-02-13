@@ -1,23 +1,19 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  app_name: 'do_it'
+  copy_right: '&copy; 2016 NSC-team'
+  links:
+    log_in: 'Log In'
+    team: 'Team'
+    sign_up: 'Sign Up'
+  welcome:
+    features:
+      general: 'Features'
+      team_managment: 'Team management'
+      team_managment_description: 'Collect a team to develop the application, thus speeding up your work.'
+      burndown_chart: 'Burndown chart'
+      burndown_chart_description: 'Always be aware of the current state of development.'
+      log_time: 'Log time'
+      log_time_description: 'Your team can see the number of hours worked in order to effectively distribute their working time.'
+    start_button: 'Get Started'
+    tagline_first: 'Effective development made easy'
+    tagline_second: 'Created by developers for developers'

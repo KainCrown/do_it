@@ -1,0 +1,16 @@
+/*
+ *= require material_icons
+ *= require_tree .
+ *= require_self
+ */
+
+  @import 'materialize';
+
+  $white: #FFFFFF;
+  $teal: #26A69A;
+
+  .page-footer {
+    background-color: $teal !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
