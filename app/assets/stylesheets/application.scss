@@ -41,7 +41,6 @@
 
   .card {
     background-color: #26a69a;
-    text-align: center;
     min-height: 350px;
     height: auto;
     .material-icons {
@@ -49,6 +48,22 @@
     }
   }
 
+  .card-centered {
+    display: flex;
+    align-items: center;
+
+    .card-content {
+      min-width: 100%;
+      text-align: center;
+    }
+  }
+
+  .section.created-by {
+    padding-bottom: 0;
+  }
+
   .page-footer {
     background-color: #26a69a !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
   }

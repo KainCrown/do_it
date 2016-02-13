@@ -20,21 +20,21 @@ nav role="navigation"
       i.material-icons menu
 
 .parallax-container#index-banner.valign-wrapper
-  .section.no-pad-bot.valign
+  .section.no-pad-bot.valign-wrapper
     .container
       br
       br
       h1.header.center.teal-text.text-lighten-2
         | do_it
       .row.center
-        h5.header.col.s12.light Make your development more effective
+        h5.header.col.s12.light Effective development made easy
       .row.center
         a href="#" class="btn-large waves-effect waves-light teal lighten-1" Get Started
       br
       br
 
   .parallax
-    = image_tag "photo-1416339684178-3a239570f315.jpg"
+    = image_tag 'index/welcome'
 
 .container
   .section
@@ -43,43 +43,43 @@ nav role="navigation"
     hr
     .row
       .col.s12.m4
-        .card.darken-1.valign-wrapper
+        .card.card-centered.darken-1.valign-wrapper
           .card-content.white-text.valign
             h2.center.white-text
               i.material-icons message
-            span.card-title Collaboration with team
-            p You can collect a team to develop the application, thus speeding up your work.
+            span.card-title Team management
+            p Collect a team to develop the application, thus speeding up your work.
 
       .col.s12.m4
-        .card.darken-1.valign-wrapper
+        .card.card-centered.darken-1.valign-wrapper
           .card-content.white-text.valign
             h2.center.white-text
               i.material-icons trending_down
             span.card-title Burndown chart
-            p You will always be aware of the current state of affairs.
+            p Always be aware of the current state of development.
 
 
       .col.s12.m4
-        .card.darken-1.valign-wrapper
+        .card.card-centered.valign-wrapper
           .card-content.white-text.valign
             h2.center.white-text
               i.material-icons timer
             span.card-title Log time
-            p Everyone on your team can see the number of hours worked in order to effectively distribute their working time.
+            p Your team can see the number of hours worked in order to effectively distribute their working time.
 
-.section
+.section.created-by
   .parallax-container#index-banner.valign-wrapper
     .section.no-pad-bot.valign
       .container
         br
         br
         h4.header.center.teal-text.text-lighten-2
-          | Created by developers for other developers
+          | Created by developers for developers
         br
         br
 
     .parallax
-      = image_tag "unsplash_5288cc8f3571d_1.jpg"
+      = image_tag 'index/developers'
 
 footer.page-footer
   .footer-copyright
