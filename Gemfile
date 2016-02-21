@@ -9,6 +9,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'devise'
+
 gem 'font-awesome-rails'
 gem 'materialize-sass'
 gem 'material_icons'
@@ -23,6 +25,9 @@ end
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'rubocop'
+  gem 'pry-rails', '~> 0.3.4'
+  gem 'pry-byebug', '~> 3.3'
 end
 
 group :production do

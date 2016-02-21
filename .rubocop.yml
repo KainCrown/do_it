@@ -1,0 +1,25 @@
+Rails:
+  Enabled: true
+
+AllCops:
+  Exclude:
+      - 'test/**/*'
+      - 'db/**/*'
+      - 'config/**/*'
+      - 'bin/**/*'
+      - 'Gemfile'
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 25
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 25
