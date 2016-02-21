@@ -11,6 +11,12 @@ $teal: #26A69A;
     color: $white;
   }
 
+  .side-nav {
+    a {
+      color: black;
+    }
+  }
+
   p {
     line-height: 2rem;
   }
@@ -60,5 +66,12 @@ $teal: #26A69A;
 
   #features {
     color: $teal;
+  }
+
+
+  .page-footer {
+    background-color: $teal !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
   }
 }

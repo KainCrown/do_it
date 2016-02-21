@@ -5,6 +5,8 @@ en:
     log_in: 'Log In'
     team: 'Team'
     sign_up: 'Sign Up'
+    sign_out: 'Sign Out'
+    notifications: 'Notifications'
   welcome:
     features:
       general: 'Features'
@@ -17,3 +19,12 @@ en:
     start_button: 'Get Started'
     tagline_first: 'Effective development made easy'
     tagline_second: 'Created by developers for developers'
+  projects:
+    index:
+      headers:
+        new_project: 'New Project'
+        edit_project: 'Edit Project'
+        actions: 'Actions'
+      actions:
+        edit: 'Edit'
+        delete: 'Delete'

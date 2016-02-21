@@ -12,6 +12,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'font-awesome-rails'
 gem 'materialize-sass'
 gem 'material_icons'
+gem 'simple_form'
 gem 'slim'
 
 group :development, :test do
