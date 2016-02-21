@@ -1,0 +1,19 @@
+#project {
+
+  .page-footer {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  #card-plus {
+    .card-content {
+      min-height: 320px;
+      height: auto;
+    }
+  }
+
+  .fixed-action-btn {
+    bottom: 25px;
+    right: 25px;
+  }
+}

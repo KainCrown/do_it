@@ -1,0 +1,11 @@
+#project-list
+  .row
+    = render partial: 'projects/elements/project', collection: @projects
+
+  .fixed-action-btn
+    a.btn-floating.btn-large.waves-effect.waves-light.modal-trigger.red href='#new-project-modal'
+      i.large.material-icons add
+
+  #new-project-modal.modal
+    = simple_form_for @project do |form|
+      = render partial: 'projects/forms/inputs', locals: { form: form, action: t('projects.index.headers.new_project')}
