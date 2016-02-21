@@ -7,6 +7,9 @@ html
     = csrf_meta_tags
     meta name="viewport" content="width=device-width, initial-scale=1"
   body.grey.lighten-4
+    - flash.each do |type, message|
+      #notice_wrapper
+        p class="#{type}" = message
     #project
       nav.blue.darken-2
         .nav-wrapper
