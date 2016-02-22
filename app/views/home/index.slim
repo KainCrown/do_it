@@ -3,12 +3,18 @@
     .nav-wrapper.container
       a#logo-container.brand-logo href="#" = t('app_name')
       ul.right.hide-on-med-and-down
-        li
-          a href="#" = t('links.team')
-        li
-          a href="#" = t('links.log_in')
-        li
-          a href="#" = t('links.sign_up')
+        - if user_signed_in?
+          li
+            a href="#" = t('links.team')
+          li
+            td= link_to t('links.sign_out'), destroy_user_session_path, :method => :delete, :data => {:confirm => 'Are you sure?'} 
+        - else
+          li
+            a href="#" = t('links.team')
+          li
+            a href=new_user_session_path = t('links.log_in')
+          li
+            a href=new_user_registration_path = t('links.sign_up')
       ul#nav-mobile.side-nav
         li
           a href="#" = t('links.team')
