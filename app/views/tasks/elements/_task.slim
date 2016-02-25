@@ -1,0 +1,14 @@
+.col.s12.m4
+  .card.small.hoverable
+    .card-content
+      span.card-title = task.title
+      p = task.description
+    .card-action
+      = link_to task_path(task), method: :delete do
+        i.material-icons.right delete_forever
+      a.modal-trigger href='#edit-#{task.id}'
+        i.material-icons.right edit
+
+.modal id="edit-#{task.id}"
+  = simple_form_for task, url: task_path(task), method: :put do |form|
+    = render partial: 'tasks/forms/inputs', locals: { form: form, action: 'Edit' }
