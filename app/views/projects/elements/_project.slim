@@ -1,23 +1,17 @@
-.col.s12.m4
-  .card.small
-    .card-content
-      span.card-title = project.name
-      p = project.description
-    .card-action
-      a href="#"
-        i.material-icons.activator.right more_vert
-    .card-reveal.blue.darken-2.white-text
-      span.card-title
-        = t('projects.index.headers.actions')
-        i.material-icons.right close
-        hr
-      p = link_to project_path(project), method: :delete, class: 'white-text' do
-        i.material-icons.left delete_forever
-        = t('projects.index.actions.delete')
-      p
-        a.white-text.modal-trigger href='#edit-#{project.id}'
-          i.material-icons.left edit
-          = t('projects.index.actions.edit')
+.col.s12
+  ul.collapsible.popout data-collapsible='accordion'
+    li
+      .collapsible-header
+        i.material-icons label
+        = project.name
+        = link_to project_path(project), class: 'right', method: :delete do
+          i.material-icons.teal-text delete_forever
+        a.modal-trigger.right href='#edit-#{project.id}'
+          i.material-icons.teal-text edit
+      .collapsible-body
+        .row
+          p = project.description
+
 .modal id="edit-#{project.id}"
   = simple_form_for project, url: project_path(project), method: :put do |form|
-    = render partial: 'projects/forms/inputs', locals: { form: form, action: t('projects.index.headers.new_project') }
+    = render partial: 'projects/forms/inputs', locals: { form: form, action: t('projects.index.headers.edit_project') }
