@@ -12,6 +12,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'administrate'
 
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-github'
+gem 'omniauth-linkedin'
 
 gem 'font-awesome-rails'
 gem 'materialize-sass'

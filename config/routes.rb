@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     root to: "users#index"
   end
 
-  devise_for :users
+  devise_for :users, controllers: { omniauth_callbacks: 'callbacks' }
   root 'home#index'
 
   resources :home, only: :index
