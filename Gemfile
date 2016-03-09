@@ -18,6 +18,7 @@ gem 'omniauth-github'
 gem 'omniauth-linkedin'
 
 gem 'font-awesome-rails'
+gem 'jquery-ui-rails'
 gem 'materialize-sass'
 gem 'material_icons'
 gem 'simple_form'

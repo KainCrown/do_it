@@ -1,0 +1,9 @@
+.row
+  ul.col.s3.kanban_col data-col-type='do'
+    = render partial: 'kanban/elements/task', collection: @tasks
+  ul.col.s3.kanban_col data-col-type='in_progress'
+    = render partial: 'kanban/elements/task', collection: @tasks
+  ul.col.s3.kanban_col data-col-type='in_pr'
+    = render partial: 'kanban/elements/task', collection: @tasks
+  ul.col.s3.kanban_col data-col-type='done'
+    = render partial: 'kanban/elements/task', collection: @tasks

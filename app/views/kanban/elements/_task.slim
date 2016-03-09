@@ -1,0 +1,9 @@
+li.card.hoverable
+  .card-content
+    span.card-title = task.title
+    p = task.description
+  .card-action
+    = link_to task_path(task), method: :delete do
+      i.material-icons.right delete_forever
+    a.modal-trigger href='#edit-#{task.id}'
+      i.material-icons.right edit
