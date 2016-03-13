@@ -23,6 +23,13 @@ gem 'material_icons'
 gem 'simple_form'
 gem 'slim'
 
+gem 'easy-emoji'
+gem 'gemoji'
+gem 'github-markdown'
+gem 'html-pipeline'
+gem 'jquery-atwho-rails'
+gem 'sanitize'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'

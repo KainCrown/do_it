@@ -1,0 +1,2 @@
+= simple_form_for @task, url: task_path(@task), method: :put do |form|
+  = render partial: 'tasks/forms/inputs', locals: { form: form, action: 'Edit' }

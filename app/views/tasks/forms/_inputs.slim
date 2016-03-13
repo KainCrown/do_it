@@ -1,15 +1,10 @@
-.modal-content
-  .row
-    h4.center = action
-  .row
-    .input-field
-      i.material-icons.prefix book
-      = form.input_field :title, type: 'text'
-      = form.label :title
-  .row
-    .input-field
-      i.material-icons.prefix mode_edit
-      = form.input_field :description, type: 'text', class: 'materialize-textarea'
-      = form.label :description
-.modal-footer
-  = form.button :submit, class: 'waves-effect waves-blue btn-flat right'
+h4.center = action
+.input-field
+  i.material-icons.prefix book
+  = form.input_field :title, type: 'text'
+  = form.label :title
+.input-field
+  i.material-icons.prefix mode_edit
+  = form.input_field :description, type: 'text', class: 'materialize-textarea'
+  = form.label :description
+= form.button :submit, class: 'waves-effect waves-blue btn-flat'
