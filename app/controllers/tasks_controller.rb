@@ -1,6 +1,4 @@
 class TasksController < ApplicationController
-  layout 'task'
-
   before_action :set_task, only: [:show, :edit, :update, :destroy]
 
   def index
