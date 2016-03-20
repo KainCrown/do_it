@@ -8,3 +8,36 @@
   .col.s3.kanban_col data-col-type='done'
     = render partial: 'kanban/elements/task', collection: @tasks
 .col.s3#task_panel
+  .section.container#task_content
+    strong#active_task_title
+    hr
+    p#active_task_description
+  .preloader-wrapper.big.active.valign.hide
+    .spinner-layer.spinner-blue
+      .circle-clipper.left
+        .circle
+      .gap-patch
+        .circle
+      .circle-clipper.right
+        .circle
+    .spinner-layer.spinner-red
+      .circle-clipper.left
+        .circle
+      .gap-patch
+        .circle
+      .circle-clipper.right
+        .circle
+    .spinner-layer.spinner-yellow
+      .circle-clipper.left
+        .circle
+      .gap-patch
+        .circle
+      .circle-clipper.right
+        .circle
+    .spinner-layer.spinner-green
+      .circle-clipper.left
+        .circle
+      .gap-patch
+        .circle
+      .circle-clipper.right
+        .circle

@@ -7,6 +7,10 @@ class TasksController < ApplicationController
   end
 
   def show
+    respond_to do |format|
+      format.html
+      format.json { render json: @task, only: [:title, :description] }
+    end
   end
 
   def new
@@ -32,7 +36,10 @@ class TasksController < ApplicationController
     else
       flash[:danger] = 'Failed'
     end
-    redirect_to tasks_path
+    respond_to do |format|
+      format.html { redirect_to tasks_path }
+      format.json { render json: { status: 'ok' } }
+    end
   end
 
   def destroy
@@ -50,6 +57,6 @@ class TasksController < ApplicationController
     end
 
     def task_params
-      params.require(:task).permit(:title, :description)
+      params.require(:task).permit(:title, :description, :state)
     end
 end

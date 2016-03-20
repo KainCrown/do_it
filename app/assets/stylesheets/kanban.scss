@@ -23,6 +23,10 @@
 #task_panel {
   height: 100%;
   overflow-y: scroll;
+
+  .preloader-wrapper {
+    margin: auto;
+  }
 }
 
 .tilt.right {
