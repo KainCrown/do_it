@@ -38,14 +38,19 @@ $ ->
       tilt_direction(ui.item)
     ),
     stop: ((event, ui) ->
-      updateTaskState(ui.item)
       ui.item.removeClass("tilt")
       ui.item.removeClass("left")
       ui.item.removeClass("right")
-      $('.card').removeClass('hide')
       $('.kanban_col').removeClass('state')
       $("html").unbind('mousemove', ui.item.data("move_handler"))
       ui.item.removeData("move_handler")
+      $(ui.item).closest('.kanban_col').removeClass('focus')
+    ),
+    over: ((event, ui) ->
+      $(ui.placeholder).closest('.kanban_col').addClass('focus')
+    ),
+    out: ((event, ui) ->
+      $(ui.placeholder).closest('.kanban_col').removeClass('focus')
     )
   })
 
