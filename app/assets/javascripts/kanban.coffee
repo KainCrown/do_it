@@ -46,6 +46,13 @@ $ ->
       $('.kanban_col').removeClass('state')
       $("html").unbind('mousemove', ui.item.data("move_handler"))
       ui.item.removeData("move_handler")
+      $(ui.item).closest('.kanban_col').removeClass('focus')
+    ),
+    over: ((event, ui) ->
+      $(ui.placeholder).closest('.kanban_col').addClass('focus')
+    ),
+    out: ((event, ui) ->
+      $(ui.placeholder).closest('.kanban_col').removeClass('focus')
     )
   })
 
