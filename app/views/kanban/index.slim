@@ -1,12 +1,16 @@
 .col.s9#kanban_panel.grey.lighten-2
   .col.s3.kanban_col data-col-type='do'
-    = render partial: 'kanban/elements/task', collection: @tasks
+    h5.center-align Do
+    = render partial: 'kanban/elements/task', collection: @do_tasks
   .col.s3.kanban_col data-col-type='in_progress'
-    = render partial: 'kanban/elements/task', collection: @tasks
+    h5.center-align In Progress
+    = render partial: 'kanban/elements/task', collection: @in_progress_tasks
   .col.s3.kanban_col data-col-type='in_pr'
-    = render partial: 'kanban/elements/task', collection: @tasks
+    h5.center-align In PR
+    = render partial: 'kanban/elements/task', collection: @in_pr_tasks
   .col.s3.kanban_col data-col-type='done'
-    = render partial: 'kanban/elements/task', collection: @tasks
+    h5.center-align Done
+    = render partial: 'kanban/elements/task', collection: @done_tasks
 .col.s3#task_panel
   .section.container#task_content
     strong#active_task_title
