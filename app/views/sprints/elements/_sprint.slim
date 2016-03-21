@@ -1,0 +1,14 @@
+.col.s12.m4
+  .card.small.hoverable
+    .card-content
+      p = sprint.start
+      p = sprint.end
+    .card-action
+      = link_to sprint_path(sprint), method: :delete do
+        i.material-icons.right delete_forever
+      a.modal-trigger href='#edit-#{sprint.id}'
+        i.material-icons.right edit
+
+.modal id="edit-#{sprint.id}"
+  = simple_form_for sprint, url: sprint_path(sprint), method: :put do |form|
+    = render partial: 'sprints/forms/inputs', locals: { tasks: @tasks, form: form, action: 'Edit' }

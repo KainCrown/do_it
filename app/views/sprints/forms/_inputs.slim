@@ -1,0 +1,16 @@
+.modal-content
+  .row
+    h4.center = action
+  .row
+    .input-field
+      = form.text_field :start, class: 'datepicker'
+      = form.label :start
+  .row
+    .input-field
+      = form.text_field :end, class: 'datepicker'
+      = form.label :end
+  .row
+    label Tasks
+    = form.association :tasks, label: false
+.modal-footer
+  = form.button :submit, class: 'waves-effect waves-blue btn-flat right'

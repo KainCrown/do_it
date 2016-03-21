@@ -1,0 +1,23 @@
+  <% if @sprint.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sprint.errors.count, "error") %> prohibited this sprint from being saved:</h2>
+
+      <ul>
+      <% @sprint.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :start %><br>
+    <%= f.date_field :start %>
+  </div>
+  <div class="field">
+    <%= f.label :end %><br>
+    <%= f.date_field :end %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>

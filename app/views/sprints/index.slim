@@ -1,0 +1,13 @@
+h1 Listing sprints
+
+#project-list
+  .row
+    = render partial: 'sprints/elements/sprint', collection: @sprints, locals: { tasks: @tasks }
+
+  .fixed-action-btn
+    a.btn-floating.btn-large.waves-effect.waves-light.modal-trigger.red href='#new-project-modal'
+      i.large.material-icons add
+
+  #new-project-modal.modal
+    = simple_form_for @sprint do |form|
+      = render partial: 'sprints/forms/inputs', locals: { tasks: @tasks, form: form, action: 'Create' }

@@ -20,13 +20,27 @@ ActiveRecord::Schema.define(version: 20160320092438) do
     t.datetime "updated_at",               null: false
   end
 
+  create_table "sprints", force: :cascade do |t|
+    t.date     "start"
+    t.date     "end"
+    t.integer  "project_id"
+    t.boolean  "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "sprints", ["project_id"], name: "index_sprints_on_project_id"
+
   create_table "tasks", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "state"
+    t.integer  "sprint_id"
   end
+
+  add_index "tasks", ["sprint_id"], name: "index_tasks_on_sprint_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: ""
