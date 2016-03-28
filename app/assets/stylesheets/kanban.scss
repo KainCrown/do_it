@@ -22,14 +22,15 @@
   .active {
     border-color: #009688;
   }
-}
+
 
 #task_panel {
   height: 100%;
   overflow-y: scroll;
 
   .preloader-wrapper {
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
