@@ -22,6 +22,7 @@
   .active {
     border-color: #009688;
   }
+}
 
 
 #task_panel {
@@ -34,12 +35,12 @@
   }
 }
 
-.tilt.right {
+.tilt-right {
   transform: rotate(3deg);
   -moz-transform: rotate(3deg);
   -webkit-transform: rotate(3deg);
 }
-.tilt.left {
+.tilt-left {
   transform: rotate(-3deg);
   -moz-transform: rotate(-3deg);
   -webkit-transform: rotate(-3deg);

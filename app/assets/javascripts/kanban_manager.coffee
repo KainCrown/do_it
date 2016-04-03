@@ -4,15 +4,15 @@ class KanabanManager
     @set_sortable_handler()
     @set_click_handler()
 
-  title_direction: (item) ->
+  tilt_direction: (item) ->
     left_pos = item.position().left
     move_handler = (e) =>
       if (e.pageX >= left_pos)
-        item.addClass("right")
-        item.removeClass("left")
+        item.addClass("tilt-right")
+        item.removeClass("tilt-left")
       else
-        item.addClass("left")
-        item.removeClass("right")
+        item.addClass("tilt-left")
+        item.removeClass("tilt-right")
       left_pos = e.pageX
     $('html').bind('mousemove', move_handler)
     item.data('move_handler', move_handler)
@@ -40,12 +40,12 @@ class KanabanManager
         @$items.addClass('hide')
         ui.item.removeClass('hide')
         @$kanban_panel.find('.kanban_col').addClass('state')
-        @title_direction(ui.item)
+        @tilt_direction(ui.item)
       ),
       stop: ((event, ui) =>
         @update_task_state(ui.item)
-        ui.item.removeClass("left")
-        ui.item.removeClass("right")
+        ui.item.removeClass("tilt-left")
+        ui.item.removeClass("tilt-right")
         @$items.removeClass('hide')
         @$kanban_panel.find('.kanban_col').removeClass('state')
         $("html").unbind('mousemove', ui.item.data("move_handler"))
