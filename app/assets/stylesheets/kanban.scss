@@ -1,0 +1,47 @@
+// Place all the styles related to the Kanban controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#kanban_panel {
+  height: 100%;
+  overflow-y: scroll;
+
+  .kanban_col {
+    height: 100%;
+  }
+
+  .focus {
+    background-color: #C5CAE9;
+  }
+
+  .state {
+    border-style: solid;
+    border-color: #3F51B5;
+  }
+
+  .active {
+    border-color: #009688;
+  }
+}
+
+
+#task_panel {
+  height: 100%;
+  overflow-y: scroll;
+
+  .preloader-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.tilt-right {
+  transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -webkit-transform: rotate(3deg);
+}
+.tilt-left {
+  transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -webkit-transform: rotate(-3deg);
+}

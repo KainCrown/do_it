@@ -2,9 +2,40 @@ doctype html
 html
   head
     title do_it
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
     meta name="viewport" content="width=device-width, initial-scale=1"
   body
-    = yield
+    - flash.each do |type, message|
+      #notice_wrapper
+        p class="#{type}" = message
+    nav.indigo
+      .nav-wrapper.container
+        a.brand-logo href='#' = t('app_name')
+        a.button-collapse href='#' data-activates='mobile-side-bar'
+          i.material-icons menu
+        ul.right.hide-on-med-and-down
+          li
+            a href='#'
+              i.material-icons.left person
+              | Eugene Kunitsa
+          li
+            a href='#'
+              i.material-icons email
+          li
+            a href='#' = t('links.sign_out')
+        ul.side-nav#mobile-side-bar
+          li
+            a href='#'
+              i.material-icons.left person
+              | Eugene Kunitsa
+          li
+            a href='#'
+              i.material-icons.left email
+              = t('links.notifications')
+          li
+            a href='#' = t('links.sign_out')
+
+    .row.main
+      = yield

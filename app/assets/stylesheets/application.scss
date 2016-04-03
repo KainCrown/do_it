@@ -1,8 +1,17 @@
 /*
  *= require material_icons
  *= require font-awesome
+ *= require jquery-ui
  *= require_tree .
  *= require_self
  */
 
   @import 'materialize';
+
+  html, body, .row {
+    height: 100%;
+  }
+
+  .main {
+    margin-bottom: 0 !important;
+  }

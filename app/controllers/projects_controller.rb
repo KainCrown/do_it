@@ -1,6 +1,4 @@
 class ProjectsController < ApplicationController
-  layout 'project'
-
   def show
     @project = Project.find(params[:id])
   end
