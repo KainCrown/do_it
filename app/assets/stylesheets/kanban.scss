@@ -15,12 +15,24 @@
   }
 
   .state {
-    border-style: solid;
-    border-color: #3F51B5;
+    border: dotted 2px #3F51B5;
   }
 
   .active {
     border-color: #009688;
+  }
+
+  .tasks-wrapper {
+    height: 100%;
+    padding: 0 20px 0 20px;
+
+    &.focus {
+      background-color: #C5CAE9 !important;
+    }
+
+    .state-title {
+      padding: 20px;
+    }
   }
 }
 
@@ -28,6 +40,11 @@
 #task_panel {
   height: 100%;
   overflow-y: scroll;
+
+  #close-task-panel {
+    margin-top: 15px;
+    cursor: pointer;
+  }
 
   .preloader-wrapper {
     margin-left: auto;
