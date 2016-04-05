@@ -1,2 +1,4 @@
-li
-  = message.content
+li.collection-item.avatar.message-body
+  img src="http://materializecss.com/images/yuna.jpg" alt="" class="circle"
+  span.title = render_user_email(message)
+  p = message.content
