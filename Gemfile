@@ -10,7 +10,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'administrate'
-
+gem 'avatar_magick'
+gem 'dragonfly'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
@@ -23,6 +24,7 @@ gem 'materialize-sass'
 gem 'material_icons'
 gem 'simple_form'
 gem 'slim'
+
 
 group :development, :test do
   gem 'sqlite3'

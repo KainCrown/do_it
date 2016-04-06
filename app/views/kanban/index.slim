@@ -1,3 +1,5 @@
+.col.s12
+  = render partial: 'kanban/elements/cols_header'
 .col.s9#kanban_panel.white
   = render partial: 'kanban/elements/kanban_col', locals: { type: 'do', elements: @do_tasks}
   = render partial: 'kanban/elements/kanban_col', locals: { type: 'in_progress', elements: @in_progress_tasks}

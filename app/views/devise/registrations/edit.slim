@@ -1,41 +1,39 @@
-h2
-  | Edit
-  = resource_name.to_s.humanize
+.container#user_edit
+  .row
+    .col.s8.push-s2.pull-s2
+      .card
+        .row
+          = simple_form_for(current_user, url: registration_path(current_user), html: { method: :put }) do |f|
+            = devise_error_messages!
+            .col.s12
+              .row
+                .col.m3.s12.center-align
+                  = contact_avatar(current_user)
+                .col.m9.s12
+                  .row
+                    .input-field.col.m6.s12
+                      = f.input :name
 
-= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
-  = devise_error_messages!
+                    .input-field.col.m6.s12
+                      = f.input :surname
+                  .row
+                    .input-field.col.s12
+                      = f.input :email
 
-  .field
-    = f.label :email
-    br
-    = f.email_field :email, autofocus: true
+              .row
+                .input-field.col.m6.s12
+                  = f.input :password
 
-  - if devise_mapping.confirmable? && resource.pending_reconfirmation?
-    | Currently waiting confirmation for:
-    = resource.unconfirmed_email
+                .input-field.col.m6.s12
+                  = f.input :password_confirmation
 
-  .field
-    = f.label :password
-    br
-    = f.password_field :password, autocomplete: "off"
+              .row
+                .input-field.col.s12
+                  = f.input :current_password
 
-  .field
-    = f.label :password_confirmation
-    br
-    = f.password_field :password_confirmation, autocomplete: "off"
+              .row
+                .right
+                  => f.submit "Update", class: 'btn indigo'
 
-  .field
-    = f.label :current_password
-    i (we need your current password to confirm your changes)
-    br
-    = f.password_field :current_password, autocomplete: "off"
-
-  .actions
-    = f.submit "Update"
-
-h3 Cancel my account
-
-p Unhappy?
-  = button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete
-
-= link_to "Back", :back
+        .center-align
+          => button_to "Cancel my account", registration_path(current_user), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn-flat indigo-text center-'
