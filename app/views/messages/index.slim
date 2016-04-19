@@ -18,7 +18,7 @@
           ul.collection
             - @users.each do |user|
               li.collection-item.avatar
-                img src="http://materializecss.com/images/yuna.jpg" alt="" class="circle"
+                = contact_avatar(user, class: 'circle')
                 span.title = user.email
                 p.truncate = @messages.last.try(:content)
       .col.s7#messages-menu

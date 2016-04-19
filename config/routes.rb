@@ -9,10 +9,15 @@ Rails.application.routes.draw do
   root 'home#index'
 
   resources :home, only: :index
-  resources :projects
+  resources :projects do
+    member do
+      get 'members'
+    end
+  end
   resources :tasks
   resources :kanban, only: :index
   resources :messages
+  resources :users
   #Avatar routes
   get "avatar/:size/:background/:text" => Dragonfly.app.endpoint { |params, app|
     app.generate(:initial_avatar, URI.unescape(params[:text]), { size: params[:size], background_color: params[:background], font: params[:font] })
