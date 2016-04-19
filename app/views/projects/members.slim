@@ -1,0 +1,12 @@
+- unless @users.empty?
+  = render 'users/panels/user_table'
+- else
+  = render 'users/panels/empty'
+
+= simple_form_for @project do |f|
+  .row
+    .col.s11
+      = f.association :users, label: false
+    .col.s1
+      = button_tag type: 'submit', class: 'indigo btn btn-large waves-effect waves-light' do
+        i.material-icons add

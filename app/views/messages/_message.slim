@@ -1,4 +1,4 @@
 li.collection-item.avatar.message-body
-  img src="http://materializecss.com/images/yuna.jpg" alt="" class="circle"
+  = contact_avatar(message.user, class: 'circle')
   span.title = render_user_email(message)
   p = message.content
