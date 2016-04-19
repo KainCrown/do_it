@@ -2,6 +2,7 @@
  *= require material_icons
  *= require font-awesome
  *= require jquery-ui
+ *= require select2
  *= require_tree .
  *= require_self
  */
@@ -18,3 +19,9 @@
   .main {
     margin-bottom: 0 !important;
   }
+
+  .margin-wraper {
+    margin: 20px;
+  }
+
+  .tokenize-sample { width: 300px }

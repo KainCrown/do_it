@@ -1,0 +1,32 @@
+.row
+  .center
+    .margin-wraper
+      = contact_avatar(current_user, class: 'responsive-img')
+      h5.strong
+        => @project.name
+
+  ul.collection
+    li.collection-item = link_to root_path, class: 'indigo-text' do
+      i.material-icons.left info_outline
+      |  Overview
+    li.collection-item = link_to root_path, class: 'indigo-text' do
+      i.material-icons.left local_activity
+      |  Activity
+    li.collection-item = link_to root_path, class: 'indigo-text' do
+      i.material-icons.left question_answer
+      |  Tasks
+    li.collection-item = link_to members_project_path(@project), 'data-no-turbolink' => true, class: 'indigo-text' do
+      i.material-icons.left group
+      |  Members
+    li.collection-item = link_to root_path, class: 'indigo-text' do
+      i.material-icons.left timeline
+      |  Sprints
+    li.collection-item = link_to root_path, class: 'indigo-text' do
+      i.material-icons.left insert_drive_file
+      |  Documents
+    li.collection-item = link_to root_path, class: 'indigo-text' do
+      i.material-icons.left school
+      |  Wiki
+    li.collection-item = link_to root_path, class: 'indigo-text' do
+      i.material-icons.left settings
+      |  Settings

@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  layout 'project'
+
   def show
     @project = Project.find(params[:id])
   end
@@ -33,7 +35,7 @@ class ProjectsController < ApplicationController
     else
       flash[:danger] = 'Failed'
     end
-    redirect_to projects_path
+    redirect_to :back
   end
 
   def destroy
@@ -46,9 +48,18 @@ class ProjectsController < ApplicationController
     redirect_to projects_path
   end
 
+  def members
+    @project = Project.find(params[:id])
+    @users = @project.users
+  end
+
   private
 
   def project_params
-    params.require(:project).permit(:name, :description)
+    params.require(:project).permit(
+      :name,
+      :description,
+      user_ids: []
+    )
   end
 end

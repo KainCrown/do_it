@@ -1,0 +1,39 @@
+#chat{
+  overflow-y: auto;
+  height: 500px;
+}
+
+#messages-container {
+  height: 100%;
+}
+
+#sidebar {
+  .collection, .collection > * {
+    border: none;
+    background: none;
+  }
+
+  .collection {
+    .collection-item {
+      &:hover {
+        background-color: #c5cae9;
+      }
+    }
+  }
+}
+
+#users-list, #messages-menu {
+  padding: 0;
+
+  .collection-item {
+    .title {
+      font-weight: 500;
+    }
+  }
+}
+
+.message-body {
+  word-wrap: break-word;
+  border-bottom: 0 !important;
+
+}

@@ -1,0 +1,4 @@
+li.collection-item.avatar.message-body
+  = contact_avatar(message.user, class: 'circle')
+  span.title = render_user_email(message)
+  p = message.content

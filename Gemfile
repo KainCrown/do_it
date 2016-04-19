@@ -11,8 +11,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'administrate'
 gem 'avatar_magick'
-gem 'dragonfly'
 gem 'devise'
+gem 'dragonfly'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-github'
@@ -22,13 +22,20 @@ gem 'font-awesome-rails'
 gem 'jquery-ui-rails'
 gem 'materialize-sass'
 gem 'material_icons'
+gem 'private_pub'
+gem 'select2-rails'
 gem 'simple_form'
 gem 'slim'
+gem 'thin'
 
 
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
 end
 
 group :development do
