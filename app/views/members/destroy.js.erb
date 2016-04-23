@@ -1,0 +1,2 @@
+$("#user-<%= escape_javascript params[:id] %>").fadeOut(300, function() { $(this).remove(); });
+Materialize.toast('<%= escape_javascript @message %>', 4000);

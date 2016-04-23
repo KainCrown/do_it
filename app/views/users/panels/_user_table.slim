@@ -8,4 +8,5 @@ div#users-container
         th Role
         th Actions
     tbody
-      = render 'users/elements/user'
+      - @users.each do |user|
+        = render partial: 'users/elements/user', locals: { user: user }

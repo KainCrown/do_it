@@ -3,10 +3,12 @@
 - else
   = render 'users/panels/empty'
 
-= simple_form_for @project do |f|
+
+= form_tag(project_members_path(@project), method: :post, remote: true) do
   .row
-    .col.s11
-      = f.association :users, label: false
-    .col.s1
-      = button_tag type: 'submit', class: 'indigo btn btn-large waves-effect waves-light' do
-        i.material-icons add
+    .container
+      .col.s12.m11
+        = select_tag :members
+      .col.s12.m1
+        = button_tag type: 'submit', class: 'indigo btn waves-effect waves-light', id: 'add_member' do
+          i.material-icons add

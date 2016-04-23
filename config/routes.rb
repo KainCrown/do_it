@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     member do
       get 'members'
     end
+    resources :members, only: [:create, :destroy]
   end
   resources :tasks
   resources :kanban, only: :index

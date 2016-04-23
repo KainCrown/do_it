@@ -14,8 +14,8 @@ data = (params) ->
   }
 
 $ ->
-  $("#project_user_ids").empty()
-  $('#project_user_ids').select2({
+  $("#members").empty()
+  $('#members').select2({
     ajax: {
       url: '/users.json',
       delay: 500

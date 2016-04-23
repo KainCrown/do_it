@@ -1,8 +1,8 @@
-- @users.each do |user|
-  tr
-    td = contact_avatar(user, class: 'circle', style: 'max-height: 50px')
-    td = "#{user.name} #{user.surname}"
-    td = user.email
-    td = user.role
-    td
+tr id="user-#{user.id}"
+  td = contact_avatar(user, class: 'circle', style: 'max-height: 50px')
+  td = "#{user.name} #{user.surname}"
+  td = user.email
+  td = user.role
+  td
+    = link_to project_member_path(project_id: @project, id: user), remote: true, method: :delete do
       i.material-icons close
